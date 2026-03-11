@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Purchase Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>คำนวณการซื้อหิน</h1>
+        
+        <div class="stone-selection">
+            <div class="stone-card" id="mystic-stone" data-price="2000" data-clan-coins="160">
+                <img src="image/Mystic Stone.png" alt="Mystic Stone" class="stone-icon">
+                <p>Mystic Stone</p>
+                <span class="price">2000 DS</span>
+            </div>
+            
+            <div class="stone-card" id="darkened-stone" data-price="4500" data-clan-coins="375">
+                <img src="image/Darkened Stone.png" alt="Darkened Stone" class="stone-icon">
+                <p>Darkened Stone</p>
+                <span class="price">4500 DS</span>
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="ds-input">DS:</label>
+                <input type="text" id="ds-input" placeholder="0">
+                <img src="image/DS.png" alt="DS" class="input-icon">
+            </div>
+            
+            <div class="tax-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="tax-toggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">หักภาษี 30%</span>
+            </div>
+            
+            <button id="calculate-btn" class="calculate-btn">คำนวณ</button>
+        </div>
+        
+        <div class="result-section" id="result-section" style="display: none;">
+            <h3>ผลการคำนวณ</h3>
+            
+            <div class="result-item">
+                <img src="image/Mystic Stone.png" alt="Stone" class="result-icon" id="result-stone-icon">
+                <span id="stone-count">0 stones</span>
+            </div>
+            
+            <div class="result-item">
+                <img src="image/DS.png" alt="DS" class="result-icon">
+                <span id="tax-deduction">หักภาษี 30% = 0 DS</span>
+            </div>
+            
+            <div class="result-item">
+                <img src="image/Gold.png" alt="Gold" class="result-icon">
+                <span id="gold-cost">ทองที่ต้องจ่ายค่าภาษี = 0 Gold</span>
+            </div>
+            
+            <div class="result-item">
+                <img src="image/Clan Coins.png" alt="Clan Coins" class="result-icon">
+                <span id="clan-coins-cost">เหรียญแคลนที่ต้องใช้ซื้อ = 0 Coins</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
